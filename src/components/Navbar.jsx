@@ -1,5 +1,7 @@
 import logo from "../assets/logo.jpg"
-import instagram from "../assets/instagram.png"
+import instagramIcon from "../assets/instagram.png"
+import githubICon from "../assets/github.png"
+import whatsappIcon from "../assets/whatsappIcon.png"
 import { navItems } from "../constants/Index"
 import {Menu, X} from "lucide-react"
 import { useState } from "react"
@@ -17,10 +19,10 @@ export const Navbar = () => {
         <div className="flex justify-between items-center">
           
             <div className=" ml-4 flex items-center flex-shrink-0 lg:ml-12">
-                <img className="w-7 h-7 mr-2" src={logo} alt="logo" />
+                <a href="#"> <img className="w-7 h-7 mr-2 rounded-xl" src={logo} alt="logo" /></a>
             </div>
 
-            <div className="flex items-center space-x-8 mr-12">
+            <div className="flex items-center space-x-8 gap-5 mr-12">
                 <ul className="hidden lg:flex space-x-12">
                     {navItems.map((item, index) => (
                         <li key={index}>
@@ -31,9 +33,15 @@ export const Navbar = () => {
 
                 <span className="hidden lg:flex border-r-2 border-white h-6"></span>
 
-                <div className="hidden lg:flex items-center">
+                <div className="hidden lg:flex gap-7 items-center">
                     <a href="#">
-                        <img className="w-6 h-6" src={instagram} alt="Instagram" />
+                        <img className="w-6 h-6" src={instagramIcon} alt="Instagram" />
+                    </a>
+                    <a href="#">
+                        <img className="w-6 h-6" src={whatsappIcon} alt="Whatsapp" />
+                    </a>
+                    <a href="#">
+                        <img className="w-6 h-6" src={githubICon} alt="Github" />
                     </a>
                 </div>
             </div>
