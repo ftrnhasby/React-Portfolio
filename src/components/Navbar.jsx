@@ -14,7 +14,7 @@ export const Navbar = () => {
         };
 
   return (
-    <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
+    <nav  className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
     <div className="container px-4 mx-auto relative text-sm">
         <div className="flex justify-between items-center">
           
@@ -34,13 +34,13 @@ export const Navbar = () => {
                 <span className="hidden lg:flex border-r-2 border-white h-6"></span>
 
                 <div className="hidden lg:flex gap-7 items-center">
-                    <a href="#">
+                    <a href="https://www.instagram.com/hasbyassyadiqi">
                         <img className="w-6 h-6" src={instagramIcon} alt="Instagram" />
                     </a>
-                    <a href="#">
+                    <a href="https://wa.me/+6285860044207">
                         <img className="w-6 h-6" src={whatsappIcon} alt="Whatsapp" />
                     </a>
-                    <a href="#">
+                    <a href="https://github.com/ftrnhasby">
                         <img className="w-6 h-6" src={githubICon} alt="Github" />
                     </a>
                 </div>
