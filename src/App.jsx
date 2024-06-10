@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import { Navbar } from './components/Navbar'
 import { HeroSection } from './components/HeroSection'
-import { About } from './components/About'
+import { AboutSection } from './components/AboutSection'
+import { ProjectSection } from './components/ProjectSection'
 
 function App() {
   return (
     <div>
       <Navbar />
       <HeroSection />
-      <About />
+      <AboutSection />
+      <ProjectSection />
     </div>
   )
 }

@@ -26,7 +26,7 @@ export const Navbar = () => {
                 <ul className="hidden lg:flex space-x-12">
                     {navItems.map((item, index) => (
                         <li key={index}>
-                            <a href={item.href}>{item.label}</a>
+                            <a className="nav hover:text-teal-300 transition-all duration-300" href={item.href}>{item.label}</a>
                         </li>
                     ))}
                 </ul>
