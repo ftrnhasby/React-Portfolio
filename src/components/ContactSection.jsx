@@ -1,9 +1,9 @@
 export const ContactSection = () => {
   return (
     <div className="h-screen flex items-center justify-center"  id="contact" >
-      <div className="pt-10 md:pt-20">
-        <div className="p-4 md:p-8">
-          <h1 className="text-white text-center pb-8 text-4xl md:text-5xl lg:text-4xl">Contact</h1>
+      <div className="pt-5 md:pt-20">
+        <div className="p-2 md:p-8">
+          <h1 className="text-white text-center pb-5 text-4xl md:text-5xl lg:text-4xl">Contact</h1>
           <form action="" className="flex flex-col items-center ">
             <div className="md:w-full lg:w-full xl:w-full">
               <div className="flex flex-col md:flex-row">

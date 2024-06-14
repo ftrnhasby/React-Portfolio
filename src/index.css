@@ -9,6 +9,10 @@
   color-scheme: dark;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 
 .bg-shape1 {
   animation: one 50s infinite;
