@@ -14,7 +14,7 @@ const heroVariants = {
 
 export const HeroSection = () => {
   return (
-    <div className="h-screen overflow-hidden w-full gap-1  flex flex-col justify-center items-center">
+    <div className="h-screen overflow-hidden w-full gap-1  flex flex-col justify-center items-center" style={{ overflowX: 'hidden' }}>
 
 <div id="home" className="absolute inset-0 flex overflow-hidden justify-center items-center z-0">
     <div className="bg-shape1 absolute  opacity-50 filter blur-3xl rounded-full -top-10 -left-20"></div>
