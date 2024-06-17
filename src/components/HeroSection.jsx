@@ -23,7 +23,7 @@ export const HeroSection = () => {
 
   <motion.div variants={heroVariants} initial="hidden" animate="show" className="relative -mt-14  z-10 text-center">
         <h1 className="text-xl sm:text-2xl lg:text-xl tracking-[.70em]">
-            JUNIOR WEB <span className="inline bg-gradient-to-r from-teal-400 to-slate-400  text-transparent bg-clip-text">DEVELOPER</span>
+            FULLSTACK <span className="inline bg-gradient-to-r from-teal-400 to-slate-400  text-transparent bg-clip-text">DEVELOPER</span>
         </h1>
         <h1 className="text-5xl sm:text-5xl lg:text-7xl font-bold">
             HASBY AS'SYADIQI

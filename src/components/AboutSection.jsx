@@ -38,19 +38,19 @@ export const AboutSection = () => {
           style={{ translateX: paragraphLeft, opacity: paragraphOpacity }}
           className="text-lg text-center"
         >
-          Back in May 2023, I made the decision to relocate in order to pursue employment. I put a lot of effort into obtaining my dream job as a web developer, and eventually, I was employed as a Fullstack Web Developer remotely :)
+          In May 2023, I made the decision to relocate to seek employment opportunities. After putting in a lot of effort, I achieved my dream of becoming a web developer and was hired as a Fullstack Developer.
         </motion.p>
         <motion.p 
           style={{ translateX: paragraphRight, opacity: paragraphOpacity }}
           className="text-lg text-center"
         >
-          Currently, I have experience with a wide range of tasks, including managing servers, domains, landing sites, CRM, and APIs. In addition, I am a web administrator at Pamulang University, where I work.
+          Currently, I have a diverse set of skills, including managing servers and domains, Managing Wordpress site, Create landing page, company profile, CRM systems, and APIs. Additionally, I work as a web administrator at Pamulang University, where Im studying.
         </motion.p>
         <motion.p 
           style={{ translateX: paragraphLeft, opacity: paragraphOpacity }}
           className="text-lg text-center"
         >
-          When I’m not at the computer, I usually go out by myself to get coffee and spend the afternoon listening to music.
+         When I'm not working at the computer, I enjoy going out alone to get coffee and spend my afternoons listening to music.
         </motion.p>
       </div>
     </div>

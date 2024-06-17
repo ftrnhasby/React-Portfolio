@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { projects } from "../constants/Index";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import ProjectModal from "./ProjectModal";
 
 const gridVariants = {
   hidden: { opacity: 0 },
@@ -19,12 +21,22 @@ export const ProjectSection = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true });
   const controls = useAnimation();
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null); // State to track selected project index
 
   useEffect(() => {
     if (isInView) {
       controls.start("show");
     }
   }, [isInView, controls]);
+
+  const openModal = (index) => {
+    setSelectedProject(index);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
 
   return (
     <div
@@ -42,14 +54,21 @@ export const ProjectSection = () => {
         animate={controls}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-10 w-full max-w-7xl"
       >
-        {projects.map((item, index) => (
+         {projects.map((item, index) => (
           <motion.div
             variants={boxVariants}
             key={index}
-            className="rounded-lg p-4 shadow-xl bg-white/5 ring-1 ring-white/20 backdrop-blur-xl"
+            whileHover={{ scale: 1.1, zIndex: 40 }}
+            onHoverStart={() => setHoveredIndex(index)}
+            onHoverEnd={() => setHoveredIndex(null)}
+            whileTap={{ scale: 1 }}
+            className={`rounded-lg p-4 shadow-xl bg-white/5 ring-1 ring-white/20 backdrop-blur-xl mb-32 ${
+              hoveredIndex !== null && hoveredIndex !== index ? "blur-sm" : ""
+            }`}
+            onClick={() => openModal(index)} // Open modal on click
           >
             <img
-              src={item.Image}
+              src={item.image}
               className="mb-2 w-full h-auto rounded-lg"
               alt={item.title}
             />
@@ -57,7 +76,9 @@ export const ProjectSection = () => {
               <h6 className="font-semibold">{item.title}</h6>
               <h6 className="text-neutral-400">{item.date}</h6>
             </div>
-            <p className="text-neutral-400 mb-4">{item.description}</p>
+            <p className="text-neutral-400 mb-4 text-left">
+              {item.description}
+            </p>
             <div className="flex flex-wrap gap-2">
               {item.technologies.map((tech, techIndex) => (
                 <span
@@ -71,6 +92,13 @@ export const ProjectSection = () => {
           </motion.div>
         ))}
       </motion.div>
+
+      {selectedProject !== null && (
+        <ProjectModal
+          project={projects[selectedProject]}
+          closeModal={closeModal}
+        />
+      )}
     </div>
   );
 };
