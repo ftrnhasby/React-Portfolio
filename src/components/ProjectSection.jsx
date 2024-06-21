@@ -52,7 +52,7 @@ export const ProjectSection = () => {
         variants={gridVariants}
         initial="hidden"
         animate={controls}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-10 w-full max-w-7xl"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-10  w-full max-w-7xl"
       >
          {projects.map((item, index) => (
           <motion.div
@@ -62,7 +62,7 @@ export const ProjectSection = () => {
             onHoverStart={() => setHoveredIndex(index)}
             onHoverEnd={() => setHoveredIndex(null)}
             whileTap={{ scale: 1 }}
-            className={`rounded-lg p-4 shadow-xl bg-white/5 ring-1 ring-white/20 backdrop-blur-xl mb-32 ${
+            className={`rounded-lg p-4 shadow-xl bg-white/5 ring-1 ring-white/20 backdrop-blur-xl  sm:mb-0 ${
               hoveredIndex !== null && hoveredIndex !== index ? "blur-sm" : ""
             }`}
             onClick={() => openModal(index)} // Open modal on click

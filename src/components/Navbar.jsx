@@ -64,9 +64,6 @@ export const Navbar = () => {
                 <span className="hidden lg:flex border-r-2 border-white h-6"></span>
 
                 <div className="hidden lg:flex gap-7 items-center">
-                    <motion.a variants={iconVariants} href="https://www.instagram.com/hasbyassyadiqi">
-                        <img className="w-6 h-6" src={instagramIcon} alt="Instagram" />
-                    </motion.a>
                     <motion.a variants={iconVariants} href="https://wa.me/+6285860044207">
                         <img className="w-6 h-6" src={whatsappIcon} alt="Whatsapp" />
                     </motion.a>

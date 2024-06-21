@@ -64,7 +64,7 @@ export const ContactSection = () => {
               <input type="text" placeholder="Subject" name="subject" className="my-5 py-2 px-4 rounded-md bg-gray-800 text-gray-300 w-full outline-none focus:ring-1 focus:ring-teal-400" />
               <textarea placeholder="Message" name="message" className="my-5 py-2 px-4 rounded-md bg-gray-800 text-gray-300 w-full outline-none focus:ring-1 focus:ring-teal-400 h-24" rows="5"></textarea>
             </div>
-            <motion.button whileTap={{ scale:0.9 }} whileHover={{ scale:1.1, backgroundColor:"#4ECDC4" }} className="border border-blue-200 py-1 px-40 mt-8 rounded-lg" type="submit">Send Message</motion.button>
+            <motion.button whileTap={{ scale:0.9 }} whileHover={{ scale:1.1, backgroundColor:"#4ECDC4" }} className="border border-blue-200 py-1 lg:px-40 sm:px-28  mt-8 rounded-lg" type="submit">Send Message</motion.button>
           </form>
         </div>
       </div>
